@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let movie of movies">
+      <div class="card">
+        <img
+          src="http://image.tmdb.org/t/p/w500"
+          class="card-img-top"
+          alt="{{ movie.title }}"
+        />
+        <div class="card-body bg-black">
+          <div class="d-flex align-items-center justify-content-between">
+            <h5 class="card-title mt-2 text-white">{{ movie.title }}</h5>
+
+            <button (click)="toggleFavorite(movie)" class="btn bg-white">
+              {{
+                movie.favorite ? "Remove from Favorites" : "Add to Favorites"
+              }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

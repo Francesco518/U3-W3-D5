@@ -1,0 +1,43 @@
+<div class="bg-black height">
+  <div class="d-flex">
+    <div class="w-100">
+      <img
+        src="https://i.pinimg.com/736x/10/41/5d/10415d2d0accbbd6ae2ce6018fea86b9.jpg"
+        alt=""
+      />
+    </div>
+    <div class="d-flex justify-content-center align-items-center w-100">
+      <form #form="ngForm" (ngSubmit)="accedi(form)">
+        <div class="form-group">
+          <label for="email" class="text-white fw-bold">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            class="form-control"
+            ngModel
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="text-white fw-bold">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            class="form-control"
+            ngModel
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn bg-white text-black fw-bold mt-3"
+          [disabled]="form.invalid"
+        >
+          Accedi
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
